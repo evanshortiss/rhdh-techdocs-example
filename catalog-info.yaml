@@ -9,6 +9,8 @@ metadata:
     backstage.io/techdocs-ref: dir:.
     # Slug of the GitHub repository that contains this Component's source
     github.com/project-slug: evanshortiss/rhdh-techdocs-example
+    # Annotation to use with the Quay.io plugin, if installed in Developer Hub
+    quay.io/repository-slug: evanshortiss/httpsink
   tags:
     - api
     - http
@@ -19,6 +21,7 @@ metadata:
       icon: web
 spec:
   type: service
+  owner: guest
   lifecycle: production
   repository: https://github.com/evanshortiss/rhdh-techdocs-example
 ---
@@ -32,6 +35,7 @@ metadata:
     - http
 spec:
   type: openapi
+  owner: guest
   lifecycle: production
   definition: 
     $text: https://github.com/evanshortiss/rhdh-techdocs-example/blob/main/openapi-spec.json
