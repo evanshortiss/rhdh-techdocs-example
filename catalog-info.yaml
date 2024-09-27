@@ -57,16 +57,7 @@ spec:
     displayName: "Example Users"
     email: example@example.com
   members:
-    - shadowman
+    - development/guest
   children: []
   parent: default
 ---
-apiVersion: backstage.io/v1alpha1
-kind: User
-metadata:
-  name: shadowman
-spec:
-  profile:
-    displayName: Shadowman
-    email: shadowman@example.com
-  memberOf: [example]
