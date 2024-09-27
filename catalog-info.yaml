@@ -41,3 +41,22 @@ spec:
   definition: 
     $text: https://github.com/evanshortiss/rhdh-techdocs-example/blob/main/openapi-spec.json
 ---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: example
+  namespace: default
+  description: "An example user group"
+  tags:
+    - team
+    - redhat
+spec:
+  type: team
+  profile:
+    displayName: "Example Users"
+    email: example@example.com
+  members:
+    - user:guest
+    - user:shadowman
+  children: []
+  parent: default
