@@ -30,12 +30,12 @@ kind: API
 metadata:
   name: echo-service
   description: "OpenAPI specification for the Echo Service"
+  owner: guest
   tags:
     - api
     - http
 spec:
   type: openapi
-  owner: guest
   lifecycle: production
   definition: 
     $text: https://github.com/evanshortiss/rhdh-techdocs-example/blob/main/openapi-spec.json
