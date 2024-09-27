@@ -37,5 +37,7 @@ metadata:
 spec:
   type: openapi
   lifecycle: production
+  owner: guest
   definition: 
     $text: https://github.com/evanshortiss/rhdh-techdocs-example/blob/main/openapi-spec.json
+---
