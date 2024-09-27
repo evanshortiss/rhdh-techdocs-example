@@ -1,0 +1,9 @@
+site_name: 'Echo Service'
+
+nav:
+  - Overview: index.md
+  - Local Development: "local-dev.md"
+
+plugins:
+  - techdocs-core
+

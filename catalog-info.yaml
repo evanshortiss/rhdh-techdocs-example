@@ -1,0 +1,37 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: echo-service
+  description: "A simple HTTP echo service, to demonstrate TechDocs"
+  annotations:
+    # This annotation tells Backstage that the documentation is in the same
+    # directory as this catalog-info.yaml file, i.e mkdocs.yaml
+    backstage.io/techdocs-ref: dir:.
+    # Slug of the GitHub repository that contains this Component's source
+    github.com/project-slug: evanshortiss/rhdh-techdocs-example
+  tags:
+    - api
+    - http
+    - techdocs
+  links:
+    - url: https://backstage.io/docs/features/techdocs/
+      title: TechDocs Documentation
+      icon: web
+spec:
+  type: service
+  lifecycle: production
+  repository: https://github.com/evanshortiss/rhdh-techdocs-example
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: echo-service
+  description: "OpenAPI specification for the Echo Service"
+  tags:
+    - api
+    - http
+spec:
+  type: openapi
+  lifecycle: production
+  definition: 
+    $text: https://github.com/evanshortiss/rhdh-techdocs-example/blob/main/openapi-spec.json

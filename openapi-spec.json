@@ -1,0 +1,113 @@
+{
+    "openapi": "3.0.3",
+    "info": {
+      "title": "Echo Service API",
+      "version": "1.0.0",
+      "description": "This API returns requests details sent to any requested path."
+    },
+    "paths": {
+      "/{anything}": {
+        "get": {
+          "summary": "Returns details for any path",
+          "description": "This endpoint returns a JSON response with details about the request, including IP address, method, URL, and other metadata.",
+          "parameters": [
+            {
+              "name": "anything",
+              "in": "path",
+              "required": true,
+              "description": "Any path parameter that will be echoed in the response.",
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "A successful response containing request details",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "ip": {
+                        "type": "string",
+                        "description": "IP address of the client making the request.",
+                        "example": "192.168.127.1"
+                      },
+                      "method": {
+                        "type": "string",
+                        "description": "HTTP method of the request.",
+                        "example": "GET"
+                      },
+                      "url": {
+                        "type": "string",
+                        "description": "The requested URL path.",
+                        "example": "/foo"
+                      },
+                      "uuid": {
+                        "type": "string",
+                        "description": "A unique identifier for the request.",
+                        "example": "G5H87U42SZDYqH8Pzbyym"
+                      },
+                      "recv": {
+                        "type": "string",
+                        "format": "date-time",
+                        "description": "The timestamp when the request was received.",
+                        "example": "2024-09-27T06:08:44.526Z"
+                      },
+                      "resp": {
+                        "type": "string",
+                        "format": "date-time",
+                        "description": "The timestamp when the response was sent.",
+                        "example": "2024-09-27T06:08:44.528Z"
+                      },
+                      "bodyBytesSize": {
+                        "type": "integer",
+                        "description": "The size of the request body in bytes.",
+                        "example": 0
+                      },
+                      "totalBytesSize": {
+                        "type": "integer",
+                        "description": "The total size of the request and response in bytes.",
+                        "example": 80
+                      },
+                      "hostname": {
+                        "type": "string",
+                        "description": "The hostname of the server handling the request.",
+                        "example": "90238a4d9f29"
+                      },
+                      "version": {
+                        "type": "string",
+                        "description": "The version of the API or service.",
+                        "example": "1.4.0"
+                      }
+                    },
+                    "required": [
+                      "ip",
+                      "method",
+                      "url",
+                      "uuid",
+                      "recv",
+                      "resp",
+                      "bodyBytesSize",
+                      "totalBytesSize",
+                      "hostname",
+                      "version"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "components": {},
+    "servers": [
+      {
+        "url": "http://localhost:3000",
+        "description": "Local development server"
+      }
+    ]
+  }
+  
