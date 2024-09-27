@@ -21,7 +21,7 @@ metadata:
       icon: web
 spec:
   type: service
-  owner: shadowman
+  owner: development/guest
   lifecycle: production
   repository: https://github.com/evanshortiss/rhdh-techdocs-example
   providesApis:
@@ -32,14 +32,14 @@ kind: API
 metadata:
   name: echo-service
   description: "OpenAPI specification for the Echo Service"
-  owner: shadowman
+  owner: development/guest
   tags:
     - api
     - http
 spec:
   type: openapi
   lifecycle: production
-  owner: shadowman
+  owner: development/guest
   definition: 
     $text: https://github.com/evanshortiss/rhdh-techdocs-example/blob/main/openapi-spec.json
 ---
