@@ -56,8 +56,6 @@ spec:
   profile:
     displayName: "Example Users"
     email: example@example.com
-  members:
-    - development/guest
+  members: []
   children: []
-  parent: default
 ---
