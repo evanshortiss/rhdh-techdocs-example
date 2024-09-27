@@ -21,7 +21,7 @@ metadata:
       icon: web
 spec:
   type: service
-  owner: development/guest
+  owner: echo-team
   lifecycle: production
   repository: https://github.com/evanshortiss/rhdh-techdocs-example
   providesApis:
@@ -32,21 +32,21 @@ kind: API
 metadata:
   name: echo-service
   description: "OpenAPI specification for the Echo Service"
-  owner: development/guest
+  owner: echo-team
   tags:
     - api
     - http
 spec:
   type: openapi
   lifecycle: production
-  owner: development/guest
+  owner: echo-team
   definition: 
     $text: https://github.com/evanshortiss/rhdh-techdocs-example/blob/main/openapi-spec.json
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
-  name: example
+  name: echo-team
   description: "An example user group"
   tags:
     - team
