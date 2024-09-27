@@ -24,6 +24,8 @@ spec:
   owner: guest
   lifecycle: production
   repository: https://github.com/evanshortiss/rhdh-techdocs-example
+  providesApis:
+    - default/echo-service
 ---
 apiVersion: backstage.io/v1alpha1
 kind: API
